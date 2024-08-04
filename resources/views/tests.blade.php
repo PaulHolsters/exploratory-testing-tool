@@ -27,14 +27,14 @@
         <ul role="list" class="divide-y divide-gray-100 h-full">
             @foreach($tests as $test)
                 <li class="gap-x-6 py-5 bg-gray-200">
-                    <a href="/test/{{$test['id']}}" class="flex justify-between">
+                    <a href="/test/{{$test->id}}" class="flex justify-between">
                         <div class="flex min-w-0 gap-x-4">
                             <div class="min-w-0 flex-auto">
-                                <p class="mt-1 max-w-2xl truncate text-sm leading-6 text-gray-900 pl-4">{{$test['charter']}}</p>
+                                <p class="mt-1 max-w-2xl truncate text-sm leading-6 text-gray-900 pl-4">{{$test->charter}}</p>
                             </div>
                         </div>
                         <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                            <p class="text-sm leading-6 text-gray-600 pr-4">{{$test['date']}}</p>
+                            <p class="text-sm leading-6 text-gray-600 pr-4">{{$test->date}}</p>
                         </div>
                     </a>
                 </li>

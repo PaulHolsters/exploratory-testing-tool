@@ -1,32 +1,21 @@
 <?php
 
-use Illuminate\Support\Arr;
+use App\Models\Test;
 use Illuminate\Support\Facades\Route;
 
-// todo create bugreports
-$jobs = [
-    [
-        'id' => 1,
-        'charter'=>'charter A
-             flutftfktfkutfkutflutf tfktfkutfkutflutfkut
-             flutftfktfkutfkutflutf tfktfkutfkutflutfkut
-             flutftfktfkutfkutflutf tfktfkutfkutflutfkut tfktfkutfkutflutftfktfkutfkutflutf tfktfkutfkutflutfkutfkutflutf','date'=>'5/6/2024'],
-    ['id' => 2,'charter'=>'charter B tfktfkutfkutflutftfktfkutfkutflutftfktfkutfkutflutfkutfkutflutf','date'=>'5/6/2024'],
-];
-
-Route::get('/', function () use ($jobs) {
+Route::get('/', function () {
     return view('tests',[
-        'tests' => $jobs
+        'tests' => Test::all()
     ]);
 });
 
-Route::get('/test/{id}', function ($id) use ($jobs) {
+Route::get('/test/{id}', function ($id){
     return view('test',[
-        'job' => Arr::first($jobs, function ($job) use ($id) {
-            return $id == $job['id'];
-        })
+        'job' => Test::find($id)
     ]);
 });
+
+// todo voeg deleten van tests toe
 
 Route::get('/bugreport', function () {
     return view('bugreport');
