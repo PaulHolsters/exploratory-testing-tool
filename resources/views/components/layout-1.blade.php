@@ -18,7 +18,7 @@
     <main class="grow overflow-hidden">
         <div class="h-full w-full mx-auto px-4 py-6 sm:px-6 lg:px-8 flex flex-row bg-gray-100 overflow-hidden">
             <div class="basis-1/2 pr-12 border-r border-gray-300" >{{$slot}}</div>
-            <div class="basis-1/2 pl-12 overflow-x-hidden overflow-auto">{{$list}}</div>
+            <div class="basis-1/2 pl-12 overflow-x-hidden overflow-auto">{{$list ?? ''}}</div>
         </div>
     </main>
 </div>
