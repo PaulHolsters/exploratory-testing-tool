@@ -10,11 +10,6 @@ Route::get('/', function () {
              flutftfktfkutfkutflutf tfktfkutfkutflutfkut
              flutftfktfkutfkutflutf tfktfkutfkutflutfkut tfktfkutfkutflutftfktfkutfkutflutf tfktfkutfkutflutfkutfkutflutf','date'=>'5/6/2024'],
             ['charter'=>'charter B tfktfkutfkutflutftfktfkutfkutflutftfktfkutfkutflutfkutfkutflutf','date'=>'5/6/2024'],
-            ['charter'=>'charter N tfktfkutfkutflutftfktfkutfkutflutftfktfkutfkutflutfkutfkutflutf','date'=>'5/6/2024'],
-            ['charter'=>'charter N tfktfkutfkutflutftfktfkutfkutflutftfktfkutfkutflutfkutfkutflutf','date'=>'5/6/2024'],
-            ['charter'=>'charter N tfktfkutfkutflutftfktfkutfkutflutftfktfkutfkutflutfkutfkutflutf','date'=>'5/6/2024'],
-            ['charter'=>'charter N tfktfkutfkutflutftfktfkutfkutflutftfktfkutfkutflutfkutfkutflutf','date'=>'5/6/2024'],
-            ['charter'=>'charter N tfktfkutfkutflutftfktfkutfkutflutftfktfkutfkutflutfkutfkutflutf','date'=>'5/6/2024'],
         ]
     ]);
 });
