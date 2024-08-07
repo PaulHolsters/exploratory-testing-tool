@@ -1,20 +1,34 @@
 <x-layout-1>
-    <form>
+    {{--    @if($errors->any())
+            <div class="mt-10">
+            <ul>
+            @foreach($errors->all() as $error)
+                <li class="text-red-500">{{$error}}</li>
+            @endforeach
+            </ul>
+            </div>
+        @endif--}}
+    <form method="POST" action="/tests">
+        @csrf
         <div class="space-y-12">
             <div class="border-b border-gray-900/10 pb-12">
                 <h2 class="text-base font-semibold leading-7 text-gray-900">New test</h2>
-
                 <div class="col-span-full">
                     <label for="about" class="block text-sm font-medium leading-6 text-gray-900">Charter</label>
                     <div class="mt-2">
-                            <textarea id="about" name="about" rows="3"
-                                      class="max-h-80 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                            <textarea
+                                required
+                                minlength="3"
+                                id="charter" name="charter" rows="3"
+                                class="max-h-80 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
                     </div>
+                    @error('charter')
+                    <div class="mt-1"><i class="text-red-500">{{$message}}</i></div>
+                    @enderror
                     <p class="mt-3 text-sm leading-6 text-gray-600">Fill in your test charter.</p>
                 </div>
             </div>
         </div>
-
         <div class="mt-6 flex items-center justify-end gap-x-6">
             <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Clear</button>
             <button type="submit"
@@ -27,7 +41,7 @@
         <ul role="list" class="divide-y divide-gray-100 h-full">
             @foreach($tests as $test)
                 <li class="gap-x-6 py-5 bg-gray-200">
-                    <a href="/test/{{$test->id}}" class="flex justify-between">
+                    <a href="/tests/{{$test->id}}" class="flex justify-between">
                         <div class="flex min-w-0 gap-x-4">
                             <div class="min-w-0 flex-auto">
                                 <p class="mt-1 max-w-2xl truncate text-sm leading-6 text-gray-900 pl-4">{{$test->charter}}</p>

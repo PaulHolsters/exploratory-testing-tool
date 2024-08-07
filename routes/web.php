@@ -1,24 +1,19 @@
 <?php
 
-use App\Models\Test;
+use App\Http\Controllers\BugReportController;
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('tests',[
-        'tests' => Test::all()
-    ]);
+Route::get('/',function(){
+    return redirect('/tests');
 });
 
-Route::get('/test/{id}', function ($id){
-    return view('test',[
-        'job' => Test::find($id)
-    ]);
-});
+Route::resource('tests',TestController::class,[
+    'except' => ['edit','store']
+]);
 
-// todo voeg deleten van tests toe
+// todo voeg deleten van tests en bugreports toe
 
-Route::get('/bugreport', function () {
-    return view('bugreport');
-});
+Route::get('/bugreport', [BugReportController::class, 'index']);
 
 
