@@ -1,7 +1,6 @@
-import './bootstrap';
 
-function clear () {
+window.clear = function clear() {
+    console.log('rrrhoi')
     document.getElementById('charter').value = ''
 }
 
-window.clear = clear
