@@ -9,6 +9,7 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"  rel="stylesheet" />
+    @vite('resources/js/app.js')
 </head>
 <body class="h-full">
 <div class="h-full flex flex-col flex-nowrap">
@@ -41,5 +42,6 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 </body>
+
 </html>
 
