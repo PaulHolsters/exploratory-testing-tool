@@ -17,29 +17,17 @@ class TestController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create(Request $request)
-    {
+    public function store(Request $request){
         $request->validate([
             'charter' => ['required','min:3'],
         ]);
-        $test = Test::create([
-            'charter'=>$request->charter,
-            'date'=>date('Y-m-d')
-        ]);
+        $test = new Test();
+        $test->charter = $request->charter;
+        $test->date = date('Y-m-d');
+        $test->save();
         return view('tests.show',[
             'test' => $test
         ]);
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
     }
 
     /**
@@ -50,14 +38,6 @@ class TestController extends Controller
         return view('tests.show',[
             'test' => $test
         ]);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
     }
 
     /**
@@ -77,8 +57,9 @@ class TestController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Test $test)
     {
-        //
+        $test->delete();
+        return redirect('/tests');
     }
 }

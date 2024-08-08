@@ -9,11 +9,11 @@ Route::get('/',function(){
 });
 
 Route::resource('tests',TestController::class,[
-    'except' => ['edit','store']
+    'except' => ['edit','create']
 ]);
 
-// todo voeg deleten van tests en bugreports toe
-
-Route::get('/bugreport', [BugReportController::class, 'index']);
+Route::resource('bugreports',BugReportController::class,[
+    'except' => ['edit','create']
+]);
 
 

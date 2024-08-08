@@ -30,9 +30,7 @@ use Illuminate\Support\Carbon;
 class Test extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'charter', 'date'
-    ];
+    protected $guarded = [];
 
     function bugreports(): HasMany
     {

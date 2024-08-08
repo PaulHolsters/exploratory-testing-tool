@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class BugReport extends Model
 {
     use HasFactory;
+    protected $guarded = [];
 
     function test(): BelongsTo
     {

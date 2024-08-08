@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\BugReport;
+use App\Models\Test;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -13,11 +15,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
         User::factory()->create([
-            'name' => 'Test User',
+            'first_name' => 'Test User',
+            'last_name' => 'Test User Holsters',
             'email' => 'test@example.com',
         ]);
+
+        Test::factory(30)->create();
+        BugReport::factory(10)->create();
+
     }
 }

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('environment');
-            $table->string('users');
+            $table->string('users')->nullable(true);
             $table->foreignIdFor(\App\Models\Test::class,'test_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
