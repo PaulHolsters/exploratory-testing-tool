@@ -11,8 +11,8 @@
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"  rel="stylesheet" />
 {{--    @vite('resources/js/app.js')--}}
 </head>
-<body class="h-full">
-<div class="h-full flex flex-col flex-nowrap">
+<body class="h-full overflow-hidden">
+<div class="h-full flex flex-col flex-nowrap overflow-hidden">
     <header class="bg-white shadow flex-none w-full">
         <div class="px-4 py-6 sm:px-6 lg:px-8 bg-slate-900 flex justify-between content-center items-center">
             <h1 class="text-3xl font-bold tracking-tight text-white">Exploratory testing tool</h1>

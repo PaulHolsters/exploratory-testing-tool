@@ -6,17 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class BugReport extends Model
+class TestStep extends Model
 {
     use HasFactory;
     protected $guarded = [];
-
-    function test(): BelongsTo
+    function bugreport(): BelongsTo
     {
-        return $this->belongsTo(Test::class);
-    }
-
-    function steps(){
-        return $this->hasMany(TestStep::class);
+        return $this->belongsTo(BugReport::class);
     }
 }

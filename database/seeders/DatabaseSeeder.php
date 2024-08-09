@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
-        Test::factory(30)->create();
+        Test::factory(10)->create();
         BugReport::factory(10)->create();
 
     }
