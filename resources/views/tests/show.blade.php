@@ -19,7 +19,7 @@
         <div class="space-y-12 mt-8">
             <div class="border-b border-t pt-8 border-gray-900/10 pb-12">
                 <div class="col-span-full">
-                    <label for="about" class="block text-sm font-medium leading-6 text-gray-900">Charter</label>
+                    <label for="charter" class="block text-sm font-medium leading-6 text-gray-900">Charter</label>
                     <div class="mt-2">
                             <textarea id="charter" name="charter" rows="3"
                                       class="max-h-80 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm
@@ -39,7 +39,7 @@
                 Delete
             </button>
             <div class="space-x-6 flex items-center">
-                <button type="button" class="text-sm font-semibold leading-6 text-gray-900">
+                <button type="button" class="text-sm font-semibold leading-6 text-gray-900" onclick="location.reload()">
                     Reset
                 </button>
                 <button type="submit"

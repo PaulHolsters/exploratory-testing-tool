@@ -1,6 +1,5 @@
 
-window.clear = function clear() {
-    console.log('rrrhoi')
-    document.getElementById('charter').value = ''
+window.clear = function clear(id) {
+    document.getElementById(id).value = ''
 }
 
